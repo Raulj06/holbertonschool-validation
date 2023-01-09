@@ -1,13 +1,12 @@
-build:	## builds the hugo website
+build: ## build hugo
 	hugo
 
-clean:	## cleans the content from dist directory
+clean: ## erase the content from directory
 	rm -rf ./dist/*
 
-post:	## adds posts
+post: ## creates a post
 	hugo new posts/$(POST_NAME).md
 	sed -i '2s/.*/title: "$(POST_TITLE)"/' content/posts/$(POST_NAME).md
-
 .SILENT:
-help:	## provides help about Makefile commands
+help:	## provides help about commands
 	cat Makefile | grep '##' | tr -d '##'

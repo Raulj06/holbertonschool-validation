@@ -1,12 +1,12 @@
-## Hugo
+Building Hugo
 
-## Prerequisites
-- Install Hugo the extended edition
+Prerequisites
+- Install Hugo extended edition
 - Install Git
-- Install go
+- Install Go
 
-## Lifecycle
+Lifecycle
 - post
-- build
 - clean
+- build
 - help

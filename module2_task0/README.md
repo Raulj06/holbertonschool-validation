@@ -10,3 +10,4 @@
 - clean
 - build
 - help
+- test

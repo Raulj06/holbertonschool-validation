@@ -11,3 +11,5 @@
 - build
 - help
 - test
+- run
+- stop

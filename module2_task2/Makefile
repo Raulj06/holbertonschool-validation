@@ -28,3 +28,6 @@ test: ## test behavior
 .SILENT:
 help:	## provides help
 	cat Makefile | grep '##' | tr -d '##'
+
+unit-test: ## Golang test
+	go test -v -short -coverprofile=coverage-units.out

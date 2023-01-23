@@ -1,7 +1,7 @@
 build:	## hugo
 	hugo
 	go build -o awesome-api
-	make lint
+	lint
 
 run: ##  runs the application
 	./awesome-api >./awesome.log 2>&1 &

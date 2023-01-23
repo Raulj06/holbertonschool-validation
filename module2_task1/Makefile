@@ -1,7 +1,9 @@
-build:	## hugo
+lint: ## lint
+	golangci-lint run ./main.go
+
+build: lint ## hugo
 	hugo
 	go build -o awesome-api
-	lint
 
 run: ##  runs the application
 	./awesome-api >./awesome.log 2>&1 &
@@ -17,9 +19,6 @@ post:	## adds posts to website
 
 stop:	## stops the application
 	pkill awesome-api
-
-lint: ## lint
-	golangci-lint run ./main.go
 
 
 test: ## test behavior

@@ -13,3 +13,4 @@
 - test
 - run
 - stop
+- lint

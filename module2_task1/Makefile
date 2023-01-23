@@ -1,12 +1,13 @@
-build:	lint ## hugo
+build:	## hugo
 	hugo
 	go build -o awesome-api
+	make lint
 
 run: ##  runs the application
 	./awesome-api >./awesome.log 2>&1 &
 
 clean:	## cleans the directory
-	pkill awesome-api
+	-pkill awesome-api
 	rm -rf ./dist/*
 	rm  -f ./awesome-api ./awesome.log
 
@@ -18,7 +19,7 @@ stop:	## stops the application
 	pkill awesome-api
 
 lint: ## lint
-      golangci-lint run ./main.go
+	golangci-lint run ./main.go
 
 
 test: ## test behavior
